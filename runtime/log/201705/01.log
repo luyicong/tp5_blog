@@ -1,0 +1,3357 @@
+[ 2017-05-01T01:12:37+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.124887s][吞吐率：8.01req/s] [内存消耗：2,016.48kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000927s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.012064s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000559s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000884s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.010546s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000643s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001033s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000573s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.011937s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000403s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000742s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009097s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000606s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000680s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.010826s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000415s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000676s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000619s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000610s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008388s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000440s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000867s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000534s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000874s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000434s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000754s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000435s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:37+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.026137s][吞吐率：38.26req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:37+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.029778s][吞吐率：33.58req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:38+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.043091s][吞吐率：23.21req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.098874s][吞吐率：10.11req/s] [内存消耗：1,879.30kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000906s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008041s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000367s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000999s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007932s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000738s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000424s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000597s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008583s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000401s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007849s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000423s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008297s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000417s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000707s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000630s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000630s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008608s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000449s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000874s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000402s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000778s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000405s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000779s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000419s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:39+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.027060s][吞吐率：36.95req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:39+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.027320s][吞吐率：36.60req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:12:40+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.016018s][吞吐率：62.43req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:49+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.100482s][吞吐率：9.95req/s] [内存消耗：1,879.30kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000933s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008346s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000376s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000648s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007732s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000491s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000662s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000378s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000534s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008222s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000364s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000594s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009359s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000442s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000651s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007594s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000357s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000618s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008152s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000464s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000923s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000396s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000819s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000429s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000766s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000417s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.027040s][吞吐率：36.98req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.029182s][吞吐率：34.27req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.040794s][吞吐率：24.51req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.116929s][吞吐率：8.55req/s] [内存消耗：1,879.53kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001088s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009280s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000386s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008104s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000473s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000708s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000419s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000634s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007546s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000385s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008755s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000464s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000750s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007878s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000424s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000678s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000608s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000607s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007820s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000434s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000923s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000408s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000782s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000481s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001073s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000658s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.028875s][吞吐率：34.63req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.029928s][吞吐率：33.41req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:53+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.026037s][吞吐率：38.41req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:55+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.099182s][吞吐率：10.08req/s] [内存消耗：1,879.15kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000855s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008739s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000431s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000723s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007764s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000449s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000669s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000379s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000638s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008546s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000320s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000589s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007947s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000351s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000623s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008335s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000475s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000720s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000640s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000623s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008522s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000429s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000826s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000403s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000392s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000834s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000443s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:56+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.025184s][吞吐率：39.71req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:56+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.027161s][吞吐率：36.82req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:13:57+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.018979s][吞吐率：52.69req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:14:01+08:00 ] 127.0.0.1 127.0.0.1 GET /c/2.html
+[ log ] www.tp5.com/c/2.html [运行时间：0.107017s][吞吐率：9.34req/s] [内存消耗：2,234.75kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000856s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008359s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007891s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000475s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000786s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000532s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000964s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008167s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000666s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008588s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000526s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000811s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007865s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000470s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000889s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000465s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000822s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.000532s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001062s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000672s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000848s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007763s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000577s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:14:03+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.100747s][吞吐率：9.93req/s] [内存消耗：1,879.06kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000948s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009101s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000429s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000744s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007755s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000426s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000393s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000597s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008527s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000446s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000891s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008311s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000470s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000853s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007869s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000437s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000748s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000641s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008645s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000556s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001059s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000605s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001052s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000535s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000888s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000501s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:14:05+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.024010s][吞吐率：41.65req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:14:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.025695s][吞吐率：38.92req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:14:06+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.030419s][吞吐率：32.87req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:16:15+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.122515s][吞吐率：8.16req/s] [内存消耗：2,016.57kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010495s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009089s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000383s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000708s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007688s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000849s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000760s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000528s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000706s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007630s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000342s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000627s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000442s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000676s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009137s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000434s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000678s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000637s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000609s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007604s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000534s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000958s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000462s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000880s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000471s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000913s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000466s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:16:15+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.026723s][吞吐率：37.42req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:16:15+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.029345s][吞吐率：34.08req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:16:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.030615s][吞吐率：32.66req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:16+08:00 ] 127.0.0.1 127.0.0.1 GET /c/2.html
+[ log ] www.tp5.com/c/2.html [运行时间：0.153425s][吞吐率：6.52req/s] [内存消耗：2,234.90kb] [文件加载：45]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010392s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009133s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000438s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000668s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.011318s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000593s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009960s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000539s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000711s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.011446s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000474s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000811s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.012068s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000605s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.011834s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000585s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000898s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000731s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000763s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000459s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000928s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001017s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000771s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000894s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.010320s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000544s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:16+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.023688s][吞吐率：42.22req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:17+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.041869s][吞吐率：23.88req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:17+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.017506s][吞吐率：57.12req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:18+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.105320s][吞吐率：9.49req/s] [内存消耗：1,879.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003339s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.010606s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000466s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008085s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000518s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000747s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000479s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000860s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008378s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000354s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000651s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007984s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000365s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000582s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007979s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000348s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000775s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000790s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007565s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000479s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000809s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000381s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000367s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000655s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000370s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.027432s][吞吐率：36.45req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.027176s][吞吐率：36.80req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:19+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.015528s][吞吐率：64.40req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /c/2.html
+[ log ] www.tp5.com/c/2.html [运行时间：0.103606s][吞吐率：9.65req/s] [内存消耗：2,103.29kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000918s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009088s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000423s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000727s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007756s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000458s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000463s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000631s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008353s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000384s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008223s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000686s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007629s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000474s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000882s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000559s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000826s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000482s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001151s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000989s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000681s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000867s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007603s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000449s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:29+08:00 ] 127.0.0.1 127.0.0.1 GET /c/9.html
+[ log ] www.tp5.com/c/9.html [运行时间：0.105793s][吞吐率：9.45req/s] [内存消耗：2,113.83kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000806s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.011345s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000422s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000657s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.010723s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000565s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000741s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000443s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000631s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008591s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000504s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000767s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007887s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000400s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000658s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008118s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000531s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000461s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000621s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 9 LIMIT 1 [ RunTime:0.000498s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000992s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (9) LIMIT 1 [ RunTime:0.000451s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('9') [ RunTime:0.000563s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008576s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000446s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000861s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000408s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:30+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.102613s][吞吐率：9.75req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/9.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008136s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000380s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007768s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000532s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000738s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000388s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000592s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008131s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000468s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000721s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008103s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000557s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008306s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000445s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000710s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000414s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000741s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000997s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000889s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000766s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001084s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008690s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000562s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.116510s][吞吐率：8.58req/s] [内存消耗：1,879.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000916s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008699s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000486s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000852s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009127s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000444s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000689s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000374s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000580s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008579s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000396s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007966s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000490s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.010303s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000448s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000678s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000710s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000810s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.010013s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000543s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010652s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000538s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000864s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000456s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000821s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000500s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:42+08:00 ] 127.0.0.1 127.0.0.1 GET /c/10.html
+[ log ] www.tp5.com/c/10.html [运行时间：0.096450s][吞吐率：10.37req/s] [内存消耗：2,066.09kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '10',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000972s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.007924s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000367s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000686s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009325s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000511s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000785s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000428s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000649s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.009531s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000465s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008735s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000420s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000654s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009153s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000372s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000752s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000477s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 10 LIMIT 1 [ RunTime:0.000466s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000850s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (10) LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001385s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('10') [ RunTime:0.000730s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:44+08:00 ] 127.0.0.1 127.0.0.1 GET /c/2.html
+[ log ] www.tp5.com/c/2.html [运行时间：0.123039s][吞吐率：8.13req/s] [内存消耗：2,103.28kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/10.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000900s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009174s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000462s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000797s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009369s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000548s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000760s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000516s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000891s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.012383s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000437s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009558s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008751s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000373s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000809s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000504s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010435s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000480s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000917s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000865s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000729s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000811s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008460s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000462s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.111577s][吞吐率：8.96req/s] [内存消耗：1,879.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000888s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008363s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000456s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000727s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007646s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000454s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000676s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000417s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000733s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007952s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000463s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010064s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008545s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000406s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008541s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000480s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000837s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000758s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000730s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008505s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000552s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001373s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000721s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000949s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000510s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000893s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000569s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:47+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.103762s][吞吐率：9.64req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001043s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.010515s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000459s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008006s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000497s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000382s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000586s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008152s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000469s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000917s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008227s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000424s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000674s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008040s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000435s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000867s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000481s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000779s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000473s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000776s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000589s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001007s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000669s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000899s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008215s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000497s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:52+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.109088s][吞吐率：9.17req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001038s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009024s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000436s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000755s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009354s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000547s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000797s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000497s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000730s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.009680s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000484s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000818s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008971s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000530s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000855s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008870s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000458s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000992s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000603s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000836s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000508s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000926s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000628s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000832s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008307s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000476s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:17:59+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.114279s][吞吐率：8.75req/s] [内存消耗：1,879.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000915s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.010895s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000446s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000713s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007595s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000593s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000515s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008293s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000426s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010634s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008094s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000363s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008595s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000367s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000620s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000555s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000605s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008227s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000654s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001184s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000602s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000986s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000466s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000472s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:02+08:00 ] 127.0.0.1 127.0.0.1 GET /list.html
+[ log ] www.tp5.com/list.html [运行时间：0.019553s][吞吐率：51.14req/s] [内存消耗：796.28kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'list',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:10+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.121608s][吞吐率：8.22req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000934s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009667s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000476s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000795s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008716s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000546s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000797s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000479s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000839s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010617s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000466s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009905s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010188s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000652s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000981s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009980s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000541s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000772s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000811s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000839s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000789s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000572s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000756s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007761s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000410s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /c/4.html
+[ log ] www.tp5.com/c/4.html [运行时间：0.100984s][吞吐率：9.90req/s] [内存消耗：2,066.74kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000907s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.011722s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000410s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000639s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009872s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000472s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000711s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000555s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000810s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010164s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000490s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000954s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008053s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000471s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000758s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009896s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000421s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000692s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000404s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000555s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 4 LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000718s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (10,4) LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000937s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (10,'4') [ RunTime:0.000581s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:21+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/4.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000849s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008060s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000420s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000707s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007832s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000453s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000695s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000381s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008299s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000376s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008265s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000441s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000686s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007737s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000427s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000981s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000558s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000901s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000506s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001098s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000690s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000884s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007789s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000445s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:24+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.109990s][吞吐率：9.09req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000942s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.007752s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000449s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000727s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008035s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000498s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000700s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000425s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000585s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007850s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000437s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010474s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008169s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000374s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000612s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007742s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000350s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000481s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001168s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000607s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001086s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000692s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000927s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008570s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000529s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:27+08:00 ] 127.0.0.1 127.0.0.1 GET /c/1.html
+[ log ] www.tp5.com/c/1.html [运行时间：0.110175s][吞吐率：9.08req/s] [内存消耗：2,098.12kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000982s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.007789s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008104s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000439s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000671s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000379s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000574s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008286s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000375s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000663s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008150s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007937s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000542s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000903s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000535s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000680s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 1 LIMIT 1 [ RunTime:0.000496s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000894s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (5,6,1) LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010050s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (5,6,'1') [ RunTime:0.000683s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000888s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007820s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000489s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:31+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/js/jquery.min.map
+[ log ] www.tp5.com/static/index/js/jquery.min.map [运行时间：0.020354s][吞吐率：49.13req/s] [内存消耗：796.01kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:31+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/index.css.map
+[ log ] www.tp5.com/static/index/css/index.css.map [运行时间：0.035951s][吞吐率：27.82req/s] [内存消耗：795.98kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:32+08:00 ] 127.0.0.1 127.0.0.1 GET /static/index/css/backTop.css.map
+[ log ] www.tp5.com/static/index/css/backTop.css.map [运行时间：0.034953s][吞吐率：28.61req/s] [内存消耗：795.91kb] [文件加载：27]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:41+08:00 ] 127.0.0.1 127.0.0.1 GET /c/9.html
+[ log ] www.tp5.com/c/9.html [运行时间：0.134599s][吞吐率：7.43req/s] [内存消耗：2,113.83kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/1.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001014s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.010327s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000722s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001303s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.010897s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000650s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000954s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000538s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000808s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.009498s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000449s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000775s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010583s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000655s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000785s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.012121s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000499s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000939s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000619s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001229s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 9 LIMIT 1 [ RunTime:0.000829s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001182s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (9) LIMIT 1 [ RunTime:0.000646s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002771s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('9') [ RunTime:0.001199s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001011s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008612s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000449s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000822s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000423s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:43+08:00 ] 127.0.0.1 127.0.0.1 GET /c/9.html
+[ log ] www.tp5.com/c/9.html [运行时间：0.117619s][吞吐率：8.50req/s] [内存消耗：2,113.83kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/9.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000924s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008382s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000414s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000793s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008781s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000575s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000839s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000494s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.009449s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000526s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008601s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000523s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000736s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007639s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000399s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000847s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000501s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000656s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 9 LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000863s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (9) LIMIT 1 [ RunTime:0.000495s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010678s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('9') [ RunTime:0.000835s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001008s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008512s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000464s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000978s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000521s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T01:18:45+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.104592s][吞吐率：9.56req/s] [内存消耗：1,879.07kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=9398309888; PHPSESSID=6oph8un3g6cn1tkufpm4hvri97',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/9.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.14 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000933s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008021s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000327s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000628s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008017s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000407s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000613s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000472s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000677s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008901s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000460s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009003s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000487s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000874s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009381s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000492s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000810s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000629s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.008314s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000445s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000886s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000410s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000862s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000523s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000853s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000426s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T10:46:37+08:00 ] 127.0.0.1 127.0.0.1 GET /c/9.html
+[ log ] www.tp5.com/c/9.html [运行时间：0.937574s][吞吐率：1.07req/s] [内存消耗：2,114.15kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8521033728; pgv_si=s5617018880',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.194987s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.278449s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.006872s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001820s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.035984s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.027340s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002109s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.001128s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001703s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.032450s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.001124s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002048s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.032914s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.006256s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001168s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.022945s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000754s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001126s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000618s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001074s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 9 LIMIT 1 [ RunTime:0.013410s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004867s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (9) LIMIT 1 [ RunTime:0.018314s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001880s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('9') [ RunTime:0.017453s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002441s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.036469s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.002132s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002054s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.001007s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T10:46:40+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.104684s][吞吐率：9.55req/s] [内存消耗：1,879.15kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8521033728; pgv_si=s5617018880',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/9.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000966s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009441s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000567s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001230s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008170s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000499s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000701s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000418s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000608s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008021s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000439s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008264s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000526s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000840s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007810s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000635s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000634s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007967s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000514s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000935s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000489s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000929s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000469s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000760s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000430s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T10:47:07+08:00 ] 127.0.0.1 127.0.0.1 GET /c/2.html
+[ log ] www.tp5.com/c/2.html [运行时间：0.427278s][吞吐率：2.34req/s] [内存消耗：2,103.41kb] [文件加载：43]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8521033728; pgv_si=s5617018880',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ D:\WWW\TP5\application\index\controller\Lists.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\lists\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000910s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.008447s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000480s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000723s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007808s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000498s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000433s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000638s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007761s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000394s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000744s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007982s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000465s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000763s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007960s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000462s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000790s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000454s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000693s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000837s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.315407s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001470s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.001068s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001385s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.012111s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000816s ]
+
+---------------------------------------------------------------
+[ 2017-05-01T10:47:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.html
+[ log ] www.tp5.com/index.html [运行时间：0.098374s][吞吐率：10.17req/s] [内存消耗：1,879.15kb] [文件加载：41]
+[ info ] [ LANG ] D:\WWW\TP5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=8521033728; pgv_si=s5617018880',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'referer' => 'http://www.tp5.com/c/2.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'connection' => 'close',
+  'host' => 'www.tp5.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WWW\TP5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WWW\TP5\public/../application/index\view\index\index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000920s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009531s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000483s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000716s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008011s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 3 [ RunTime:0.000503s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000731s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000505s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000737s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007490s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000379s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.008175s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000435s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000723s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.007708s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000425s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.000747s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000840s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007861s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000466s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000858s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000406s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000784s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000417s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000775s ] mysql:dbname=blog;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000425s ]
+
+---------------------------------------------------------------
